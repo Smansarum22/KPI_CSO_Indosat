@@ -30,3 +30,23 @@ h3 {
     font-size: 30px;
     margin-top: 10%;
 }
+
+.add {
+    background-color: #80FD02;
+    border-radius: 4px;
+    border-color: inherit; /*warna border*/
+    
+    width: 10%;
+    height: 40px;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.nama_kolom {
+    width: 10%;
+    height: 40px;
+    margin-top: 2%;
+    margin-left: 5%;
+
+    font-size: 20px;
+}
