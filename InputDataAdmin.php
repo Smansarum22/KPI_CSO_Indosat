@@ -66,5 +66,9 @@
         </div>
 
     </section>
+
+    <section> <!--bagian tabel-->
+
+    </section>
 </body>
 </html>
