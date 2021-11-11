@@ -1,3 +1,11 @@
+<?php
+
+  session_start();
+  require 'server.php';
+  $db = new server;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,11 +53,11 @@
             
           <div class="col-md">
             <br><br><br>        
-            <form class="myForm">
+            <form class="myForm" method="post">
                         <input type="text" name="username" placeholder="USERNAME" class="input">
                         <br>
-                        <input type="text" name="password" placeholder="PASSWORD" class="input">
-                        <button type="button" class="btn-admin" onclick="window.location.href='InputDataAdmin.html'">Log In Admin</button>
+                        <input type="text" name="password" id="password" placeholder="PASSWORD" class="input">
+                        <input type="submit" name="admin" value="admin" class="btn-admin">
                         <img src="img/Line 1.svg" class="img-logo" alt="">
                         <button type="button" class="btn-cso" onclick="window.location.href='CSO.html'">CSO</button>
             </form>
@@ -63,3 +71,27 @@
 </body>
 
 <script src="javascriptnya.js"></script>
+
+<?php
+
+  if(isset($_POST['admin'])){
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    $hasil = $db->signin($username,$password);
+
+    echo $hasil;
+
+    if($hasil != false){
+      header("Location: InputDataAdmin.php");
+    }else{
+      echo 'Username dan password tidak terdaftar';
+    }
+
+  }
+
+?>
+
+</html>
