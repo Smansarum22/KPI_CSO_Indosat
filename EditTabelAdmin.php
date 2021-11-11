@@ -1,3 +1,11 @@
+<?php
+
+  session_start();
+  require 'server.php';
+  $db = new server;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
