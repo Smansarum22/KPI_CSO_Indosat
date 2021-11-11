@@ -3,13 +3,17 @@
 }
 
 .kolom {
-    padding: 8% 0 0;
-    margin-top: 10%;
+    padding: 0 0 0;
+    /* margin-top: 10%; */
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 10%;
 }
 
-.
+.col-md{
+    padding: 10px;
+    margin: 15px;
+}
 
 h3 {
     color:#333333;
@@ -17,28 +21,36 @@ h3 {
     font-size: 4vw;
 
     /* padding: 8% 0 0; */
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    /* margin-bottom: 30%; */
     text-align: center;
 }
 
-/* img {
-    max-width: 40%;
-
-    margin-top: 17%;
-    margin-left: 5%;
-    margin-right: 5%;
-} */
 
 
 .img-logo {
     max-width: 100%;
 
-    margin-top: 17%;
+    margin-top: 20%;
     margin-left: 5%;
     margin-right: 5%;
   
+}
+
+.myForm {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10%;
+
+    
+    border-width: 3px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);
+    background: #FEF0AD;
 }
 
 
@@ -46,7 +58,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     background-color: #FEF0AD;
-    /* width: 95%; */
+    width: 95%;
     border-width: 3px;
     border-radius: 10px;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);
@@ -57,12 +69,28 @@ h3 {
    
 }
 
+.input {
+    color: #AB993F;
+    background: transparent;
+    
+    border-radius: 8px;
+    border-color: #FDB702;
+    box-shadow: none;
+    display: flex;
+    
+    height: 40px;
+    width: 95%;
+}
+
 .btn-admin {
     background-color: #FDD202; /*warna background*/
     color: azure; /*warna font*/
     text-shadow: 2px 2px 1px grey; /*bayangan font*/
-
     border-radius: 4px;
+
+    width: 95%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     
 }
 
@@ -70,22 +98,23 @@ h3 {
     background-color: #0F123F; /*warna background*/
     color: azure; /*warna font*/
     text-shadow: 2px 2px 1px grey; /*bayangan font*/
-
     border-radius: 4px;
+
+    width: 95%;
     
 }
 
 /*untuk layar device berukuran kecil*/
 @media screen and (min-width: 450px) {
     .form, {
-        width: 50%;
+        width: 30%;
     }
 }
 
 /*untuk layar device berukuran sedang*/
 @media screen and (min-width: 550px) {
     .form, {
-        width: 67%;
+        width: 57%;
     }
 }
 
