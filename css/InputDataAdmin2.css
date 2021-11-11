@@ -1,0 +1,12 @@
+body{
+    background-color: FEF6EB;
+}
+.bagian-kiri{
+    background-color: #ffd400;
+    height: max-content;
+    width: 30%;
+}
+.gambarindosat{
+    height: 30%;
+    display: flex;
+}

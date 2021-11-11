@@ -1,12 +1,32 @@
-body{
-    background-color: FEF6EB;
+.body {
+    background-color: #FDD202;
+    background-size: cover; 
+    font-family: 'indosat';
 }
-.bagian-kiri{
-    background-color: #ffd400;
-    height: max-content;
-    width: 30%;
+
+.header {
+    background-color: #FFFCF5;
 }
-.gambarindosat{
-    height: 30%;
-    display: flex;
+
+.img-logo {
+    width: 175px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.kiri {
+    display:table-cell; /*bikin gambar jadi sejajar sama Halo Admin*/
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.kanan {
+    display:table-cell; /*bikin gambar jadi sejajar sama Halo Admin*/
+}
+
+.btn {
+    font-size: 30px;
+    margin-top: 10%;
 }
