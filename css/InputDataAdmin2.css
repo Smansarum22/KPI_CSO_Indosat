@@ -1,0 +1,15 @@
+.body{
+    background-color: #fef0ad;
+    height: 100%;
+}
+.bagian-kiri{
+    background-color: #ffd400;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+}
+.gambarindosat{
+    height: 10%;
+    margin: 20px 25px;
+    position: fixed;
+}
