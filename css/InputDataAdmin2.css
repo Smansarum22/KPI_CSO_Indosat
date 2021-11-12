@@ -1,15 +1,76 @@
 .body{
-    background-color: #fef0ad;
+    background-color: #E5E5E5;
     height: 100%;
 }
 .bagian-kiri{
     background-color: #ffd400;
     height: 100%;
-    width: 15%;
+    width: 10%;
     position: fixed;
 }
 .gambarindosat{
     height: 10%;
-    margin: 20px 25px;
+    margin: 1.5% 1%;
     position: fixed;
+}
+
+.btn {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    background: #ebe1b2;
+    border: 0;
+    border-radius:5px;
+    border: 2px;
+    padding: 10px;
+    color: #ed1c24;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 75%;
+    margin-left: 7px;
+    
+    height: 25px;
+}
+.btn:hover,.form button:focus {
+    background: #ed1c24;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     color: #ffff;
+    transform: translateY(-4px);
+}
+.form button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+.forgot{
+    text-align: center;
+}
+.gambar-navbar{
+    width: 90%;
+    height: 200%;
+    float: right;
+}
+h3{
+    margin-left: 10%;
+}
+.form-inline{
+    width: 10%;
+    float: right;
+    margin-right: 80px;
+}
+.Data-outlet{
+    margin: auto;
+}
+.download{
+   width: 20px;
+}
+.download-file{
+margin-left: 85%;
+}
+.image{
+    margin-left: 20%;
+    position: relative;
 }
