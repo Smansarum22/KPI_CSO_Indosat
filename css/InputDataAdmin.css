@@ -1,12 +1,15 @@
 body{
-    background-color: FEF6EB;
+    background-color: #fef0ad;
+    height: 100%;
 }
 .bagian-kiri{
     background-color: #ffd400;
-    height: max-content;
-    width: 30%;
+    height: 100%;
+    width: 15%;
+    position: fixed;
 }
 .gambarindosat{
-    height: 30%;
-    display: flex;
+    height: 10%;
+    margin: 20px 25px;
+    position: fixed;
 }
