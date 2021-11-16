@@ -33,6 +33,10 @@ class server {
         }
     }
 
+    function tambah() {
+
+    }
+
 }
 
 ?>

@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico" type="image/icon type">
-    <link rel="stylesheet" type="text/css"  href="css/EditTabelAdmin.css">
+    <link rel="stylesheet" type="text/css"  href="css/FormEditTabelAdmin.css">
 </head>
 
 <style>
@@ -37,6 +37,7 @@
            src: url(NotoSans-BoldItalic.ttf);       
    }
 </style>
+
 
 <body style="background-color: #FDD202; background-size: cover; font-family: 'indosat';">
     <section> <!--bagian header-->
@@ -58,7 +59,7 @@
                     </div>
 
                     <div class="kanan">
-                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.php'">Edit Tabel</button>
+                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.html'">Edit Tabel</button>
                     </div>
 
 
@@ -74,9 +75,28 @@
         </div>
 
     </section>
+    
+    <section> <!--bagian Tambah-->
+        <div>
+                       
+            <div class="container mt-5 mb-5 p-3 card text-center " style="width: 70%; border-width: 3px; border-radius: 10px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);">
+                <h5>TAMBAH NAMA KOLOM</h5>   
+                <form id="myForm">
+                    <div class="form-group row">
+                        <div class="col-sm-20 mb-3">
+                            <input type="text" name="namakolom" placeholder="NAMA KOLOM" class="form-control">
+                        </div>
+                    </div>
 
-    <section> <!--bagian tabel-->
-
+                    <button type="button" class="add" onclick="">
+                        Add
+                    </button>
+                </form> 
+            </div>
+        </div>
     </section>
+
 </body>
+
+
 </html>
