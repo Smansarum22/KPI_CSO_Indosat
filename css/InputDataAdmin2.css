@@ -25,7 +25,6 @@
     cursor: pointer;
     transition: all 0.2s;
     border-color: tomato;
-    
 }
 .btn:hover,.form button:focus {
     background: #ed1c24;
@@ -45,11 +44,12 @@ h3{
     margin-top: -30px;
 }
 .download{
-    height: 20px;
+    height: 10px;
 }
 .h6{
     margin-right: 0px;
     margin-bottom: -70px;
+    font-size: 5px;
 }
 .footer{
     background-color: #ffd400;
@@ -65,9 +65,28 @@ h3{
 }
 .btn-1{
     border:none;
-    padding:5px;
-    margin: 10px;
-    
+    background-color: transparent;
+    margin: -10px;
+    padding: -10px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    border: 0;
+    border-radius:5px;
+    border: 2px;
+    color:black;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-color: tomato;
+}
+.btn-1:hover,.form button:focus {
+    background: #ffd400;
+    color: #ffff;
+    transform: translateY(-4px);
 }
 /* .navbar-brand{
     margin-top: 15%;
