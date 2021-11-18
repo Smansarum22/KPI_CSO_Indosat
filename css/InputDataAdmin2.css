@@ -60,7 +60,15 @@ h3{
     font-family: 'Baloo Tammudu 2', cursive;
     padding: 10px;
 }
-
+.place{
+    width: 15px;
+}
+.btn-1{
+    border:none;
+    padding:5px;
+    margin: 10px;
+    
+}
 /* .navbar-brand{
     margin-top: 15%;
     width: 100%;
