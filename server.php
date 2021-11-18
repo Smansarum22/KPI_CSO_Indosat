@@ -33,7 +33,7 @@ class server {
         }
     }
 
-    function tambah() {
+    function add() {
 
     }
 

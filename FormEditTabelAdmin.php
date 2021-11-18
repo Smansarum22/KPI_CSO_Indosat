@@ -55,11 +55,11 @@
 
                 <div class="col-md">
                     <div class="kanan">
-                        <button type="button" class="btn" onclick="window.location.href='InputDataAdmin.html'">Input Data</button>
+                        <button type="button" class="btn" onclick="window.location.href='InputDataAdmin.php'">Input Data</button>
                     </div>
 
                     <div class="kanan">
-                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.html'">Edit Tabel</button>
+                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.php'">Edit Tabel</button>
                     </div>
 
 
@@ -81,16 +81,15 @@
                        
             <div class="container mt-5 mb-5 p-3 card text-center " style="width: 70%; border-width: 3px; border-radius: 10px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);">
                 <h5>TAMBAH NAMA KOLOM</h5>   
-                <form id="myForm">
+                <form class="myForm" method="post">
                     <div class="form-group row">
                         <div class="col-sm-20 mb-3">
                             <input type="text" name="namakolom" placeholder="NAMA KOLOM" class="form-control">
                         </div>
                     </div>
 
-                    <button type="button" class="add" onclick="">
-                        Add
-                    </button>
+                    <input type="submit" name="add" value="ADD" class="btn-add">
+
                 </form> 
             </div>
         </div>
@@ -98,5 +97,21 @@
 
 </body>
 
+<?php
+
+  if(isset($_POST['ADD'])){
+
+    $hasil = $db->add($namakolom);
+
+    echo $hasil;
+
+    if($hasil != false){
+      header("Location: EditTabelAdmin.php");
+    }else{
+      echo 'Nama kolom tidak terdaftar';
+    }
+
+    
+?>
 
 </html>
