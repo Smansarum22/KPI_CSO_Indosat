@@ -19,17 +19,18 @@ class server {
         //admin
         $query = "SELECT * FROM admin WHERE username = '$username' AND pass = '$passMd5'";
         $admin = mysqli_query($this->connect,$query) or die(mysqli_error($this->connect));
+        $count_user = mysqli_num_rows($admin);
         
-        if($admin == true){
+        if($count_user > 0){
 
             while($row = $admin->fetch_assoc()) {
               
                 $_SESSION["username"] =  $row["username"];
-                $_SESSION["nama"] =  $row["nama"];
             }
-
-            return "admin";
-
+            return true;
+        }
+        else{
+            return false;
         }
     }
 

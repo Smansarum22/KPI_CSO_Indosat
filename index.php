@@ -56,7 +56,7 @@
             <form class="myForm" method="post">
                         <input type="text" name="username" placeholder="USERNAME" class="input">
                         <br>
-                        <input type="text" name="password" id="password" placeholder="PASSWORD" class="input">
+                        <input type="password" name="password" id="password" placeholder="PASSWORD" class="input">
                         <input type="submit" name="admin" value="admin" class="btn-admin">
                         <img src="img/Line 1.svg" class="img-logo" alt="">
                         <button type="button" class="btn-cso" onclick="window.location.href='CSO.html'">CSO</button>
