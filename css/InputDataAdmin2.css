@@ -8,7 +8,7 @@
 .navbar-brand{
     margin-left: 2%;
 }
-.btn {
+.nav-item {
     font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -16,7 +16,8 @@
     outline: 0;
     border: 0;
     border-radius:5px;
-    margin: 0px 0px 5px;
+    /* margin: 0px 0px 5px; */
+    margin: 5px;
     border: 2px;
     padding: 5px;
     color:black;
@@ -24,9 +25,9 @@
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
-    border-color: tomato;
+    
 }
-.btn:hover,.form button:focus {
+.nav-item:hover,.form button:focus {
     background: #ed1c24;
      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
      color: #ffff;
@@ -60,14 +61,12 @@ h3{
     font-family: 'Baloo Tammudu 2', cursive;
     padding: 10px;
 }
-.place{
-    width: 15px;
-}
-.btn-1{
+
+ .nav-link{
     border:none;
     background-color: transparent;
     margin: -10px;
-    padding: -10px;
+    padding: 16px;
     font-family: "Titillium Web", sans-serif;
     font-size: 13px;
     font-weight: bold;
@@ -81,13 +80,32 @@ h3{
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
-    border-color: tomato;
+    
 }
-.btn-1:hover,.form button:focus {
-    background: #ffd400;
+.nav-link:hover,.form button:focus {
     color: #ffff;
     transform: translateY(-4px);
+    background-color: #ffd400;
+} 
+.col-md-2{
+background-color: #ffd5003b;
+margin-top: 5%;
+border-radius: 10px;
+text-align: center;
 }
+h3{
+    font-family: 'Baloo Tammudu 2', cursive;
+    text-align: center;
+    font-weight: bold;
+}
+h6{
+    margin-bottom: 5px;
+}
+/* hr{
+    width: 120px;
+    margin: -20px;
+} */
+
 /* .navbar-brand{
     margin-top: 15%;
     width: 100%;
