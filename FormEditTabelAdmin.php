@@ -82,14 +82,15 @@
             <div class="container mt-5 mb-5 p-3 card text-center " style="width: 70%; border-width: 3px; border-radius: 10px; box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.322);">
                 <h5>TAMBAH NAMA KOLOM</h5>   
                 <form class="myForm" method="post">
+                    <center>
                     <div class="form-group row">
                         <div class="col-sm-20 mb-3">
-                            <input type="text" name="namakolom" placeholder="NAMA KOLOM" class="form-control">
+                            <input type="text" name="clname" placeholder="NAMA KOLOM" class="form-control">
                         </div>
                     </div>
 
                     <input type="submit" name="add" value="ADD" class="btn-add">
-
+                    </center>    
                 </form> 
             </div>
         </div>
@@ -99,19 +100,27 @@
 
 <?php
 
-  if(isset($_POST['ADD'])){
+    if (isset($_POST["add"])) 
+    {
+        $conn=mysqli_connect("localhost", "root", "", "kpicso");
 
-    $hasil = $db->add($namakolom);
+        if (!$conn)
+        {
+            die("Connection Failed".mysqli_connect_errno());
+        }
 
-    echo $hasil;
+        $sqlquery="ALTER TABLE data_detail ADD ".$_POST["clname"]." varchar (255)";
+        if (mysqli_query($conn, $sqlquery))
+        {
+            echo "column Created Succesfully..!";
+        } 
+        else
+        {
+            echo "already column is exists".mysqli_error($conn);
+        }
 
-    if($hasil != false){
-      header("Location: EditTabelAdmin.php");
-    }else{
-      echo 'Nama kolom tidak terdaftar';
+        mysqli_close($conn);
+
     }
-
-    
 ?>
-
 </html>

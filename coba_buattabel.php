@@ -43,6 +43,7 @@
 
 <body>
     <h1>Coba Buat Tabel</h1>
+    
     <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <thead>
@@ -84,6 +85,7 @@
 
     </table>
     </div>
+    
 
     <?php mysqli_close($conn); // Close connection ?>
 
