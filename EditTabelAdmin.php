@@ -55,11 +55,11 @@
 
                 <div class="col-md">
                     <div class="kanan">
-                        <button type="button" class="btn" onclick="window.location.href='InputDataAdmin.html'">Input Data</button>
+                        <button type="button" class="btn" onclick="window.location.href='InputDataAdmin.php'">Input Data</button>
                     </div>
 
                     <div class="kanan">
-                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.html'">Edit Tabel</button>
+                        <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.php'">Edit Tabel</button>
                     </div>
 
 
@@ -78,7 +78,7 @@
     
     <section> <!--bagian Add-->
         <div>
-            <button type="button" class="add" onclick="">
+            <button type="button" class="add" onclick="window.location.href='FormEditTabelAdmin.php'">
                 Add
             </button>
             <p class="daftar_kolom">
@@ -88,9 +88,52 @@
     </section>
 
     <section> <!--tabel list nama kolom-->
+    <div class="container"> 
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Field</td>
+                <th>Action</th>
+            </tr>
+        </thead>
         
+        <tbody>
 
-    </section>
+            <?php
+                $conn=mysqli_connect("localhost", "root", "", "kpicso");
+
+                if (!$conn)
+                {
+                    die("Connection Failed".mysqli_connect_errno());
+                }
+
+                $records = mysqli_query($conn,"SHOW COLUMNS FROM data_detail"); // fetch data from database
+
+                while($data = mysqli_fetch_array($records))
+                {
+
+            ?>
+
+            <tr>
+                <td><?php echo $data['Field']; ?></td>
+                <td>
+                <!-- Button untuk modal -->
+                <a href="#" type="button" class="hapus">Hapus</a>
+                </td>
+            </tr>
+            
+            <?php
+                }
+            ?>
+        </tbody>
+
+    </table>
+    </div>
+    
+    <?php mysqli_close($conn); // Close connection ?>
+    </div>     
+</section>
 </body>
 
 
