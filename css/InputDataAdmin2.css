@@ -1,9 +1,9 @@
-.jumbotron{
-    margin-top: -90px;
-}
 .gambar-jumbotron{
    width: 100%;
    min-height: 200px;
+}
+.container-fluid{
+    background-color: rgba(245, 222, 179, 0.678);
 }
 .navbar-brand{
     margin-left: 2%;
@@ -25,7 +25,6 @@
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
-    
 }
 .nav-item:hover,.form button:focus {
     background: #dbb313;
