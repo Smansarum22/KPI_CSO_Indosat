@@ -7,8 +7,12 @@
         die("Connection Failed".mysqli_connect_errno());
     }
     
-    $sql = "DELETE FROM tabel1 WHERE Field='" . $_GET["Field"] . "'";
+    $kolom = $_GET['field'];
+    // var_dump($kolom);
 
+    // $sql = "DELETE FROM tabel1 WHERE Field='" . $_GET["Field"] . "'";
+    $sql = "ALTER TABLE tabel1 DROP ".$kolom;
+    
     if (mysqli_query($conn, $sql)) {
         echo "Record deleted successfully";
     } else {

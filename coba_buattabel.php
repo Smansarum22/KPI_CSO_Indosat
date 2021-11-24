@@ -104,6 +104,7 @@
                 <!-- Button untuk modal -->
                 <a href="hapus.php?Field=<?php echo $data["Field"]; ?>" type="button" class="btn btn-info btn-xs btn-danger" data-toggle="modal">Hapus</a>
                 <!-- <input type="button" class="btn btn-info btn-xs btn-danger" value="button" name="button">Hapus</a>  -->
+                
                 </td>
             </tr>
             
