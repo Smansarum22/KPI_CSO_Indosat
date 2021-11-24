@@ -93,7 +93,7 @@
     <table class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
-                <th>Field</td>
+                <th>Nama Kolom</td>
                 <th>Action</th>
             </tr>
         </thead>

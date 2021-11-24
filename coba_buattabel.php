@@ -6,6 +6,34 @@
 
 ?>
 
+<?php
+//Gagal keknya ini sih
+    // if (isset($_POST["button"])) 
+    // {
+    //     $conn=mysqli_connect("localhost", "root", "", "xyz");
+
+    //     if (!$conn)
+    //     {
+    //         die("Connection Failed".mysqli_connect_errno());
+    //     }
+
+    //     $sqlquery="ALTER TABLE tabel1 DROP ".$_GET['Field']." varchar (255)";
+    //     if (mysqli_query($conn, $sqlquery))
+    //     {
+    //         echo "column deleted Succesfully..!";
+    //     } 
+    //     else
+    //     {
+    //         echo "column can not be deleted".mysqli_error($conn);
+    //     }
+
+    //     mysqli_close($conn);
+
+    // }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,14 +84,14 @@
         <tbody>
 
             <?php
-                $conn=mysqli_connect("localhost", "root", "", "kpicso");
+                $conn=mysqli_connect("localhost", "root", "", "xyz");
 
                 if (!$conn)
                 {
                     die("Connection Failed".mysqli_connect_errno());
                 }
 
-                $records = mysqli_query($conn,"SHOW COLUMNS FROM data_detail"); // fetch data from database
+                $records = mysqli_query($conn,"SHOW COLUMNS FROM tabel1"); // fetch data from database
 
                 while($data = mysqli_fetch_array($records))
                 {
@@ -73,8 +101,9 @@
             <tr>
                 <td><?php echo $data['Field']; ?></td>
                 <td>
-                    <!-- Button untuk modal -->
-                <a href="#" type="button" class="btn btn-info btn-xs btn-danger" data-toggle="modal" data-target="#myModal<?php echo $data['id']; ?>">Hapus</a>
+                <!-- Button untuk modal -->
+                <a href="hapus.php?Field=<?php echo $data["Field"]; ?>" type="button" class="btn btn-info btn-xs btn-danger" data-toggle="modal">Hapus</a>
+                <!-- <input type="button" class="btn btn-info btn-xs btn-danger" value="button" name="button">Hapus</a>  -->
                 </td>
             </tr>
             
@@ -92,3 +121,5 @@
 </body>
 
 </html>
+
+<!-- belum berhasil fungsi hapus-->

@@ -113,7 +113,7 @@
         if (mysqli_query($conn, $sqlquery))
         {
             echo "column Created Succesfully..!";
-            header("Location: EditTabelAdmin.php");
+            // header("Location: EditTabelAdmin.php");
         } 
         else
         {
