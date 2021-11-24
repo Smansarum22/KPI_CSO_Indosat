@@ -46,7 +46,7 @@
           <div class="row">
             <div class="col-md">
                 
-                <h3>MONITORING KPI CSO</h3>
+                <h3>CSO PERFORMANCE MONITORING</h3>
                 <img src="img/Logo.svg" class="img-logo" alt="">
               
             </div>
@@ -59,8 +59,7 @@
                         <input type="password" name="password" id="password" placeholder="PASSWORD" class="input">
                         <input type="submit" name="admin" value="admin" class="btn-admin">
                         <img src="img/Line 1.svg" class="img-logo" alt="">
-                        <!-- <button type="button" class="btn-cso" onclick="window.location.href='CSO.html'">CSO</button> -->
-                        <input type="submit" name="user" value="user" class="btn-cso">
+                        <button type="button" class="btn-cso" onclick="window.location.href='CSO.html'">CSO</button>
             </form>
           </div>
   
