@@ -1,6 +1,6 @@
 <?php 
 
-    $conn=mysqli_connect("localhost", "root", "", "xyz");
+    $conn=mysqli_connect("localhost", "root", "", "kpicso");
 
     if (!$conn)
     {
@@ -11,7 +11,7 @@
     // var_dump($kolom);
 
     // $sql = "DELETE FROM tabel1 WHERE Field='" . $_GET["Field"] . "'";
-    $sql = "ALTER TABLE tabel1 DROP ".$kolom;
+    $sql = "ALTER TABLE data_detail DROP ".$kolom;
     
     if (mysqli_query($conn, $sql)) {
         echo "Record deleted successfully";

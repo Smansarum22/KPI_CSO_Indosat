@@ -119,7 +119,7 @@
                 <td><?php echo $data['Field']; ?></td>
                 <td>
                 <!-- Button untuk modal -->
-                <a href="#" type="button" class="hapus">Hapus</a>
+                <a href="hapus.php?field=<?php echo $data["Field"]; ?>" type="button" class="" data-toggle="modal">Hapus</a>
                 </td>
             </tr>
             
