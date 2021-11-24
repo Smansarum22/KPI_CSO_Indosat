@@ -46,7 +46,7 @@
           <div class="row">
             <div class="col-md">
                 
-                <h3>MONITORING KPI CSO</h3>
+                <h3>CSO PERFORMANCE MONITORING</h3>
                 <img src="img/Logo.svg" class="img-logo" alt="">
               
             </div>
