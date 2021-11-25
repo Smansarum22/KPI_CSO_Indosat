@@ -134,7 +134,35 @@
      transform: translateY(-4px);
      background-color: #ffd400;
  } 
- 
+ .add{
+    width: 20px;
+    margin: 5px;
+    padding: auto;
+ }
+ .btn-1{
+    border:none;
+    background-color: #ed1c24;
+    padding: 10px;
+    margin-left: 15px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    outline: 0;
+    border: 0;
+    border-radius:5px;
+    border: 2px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #ffff;
+ }
+ .btn-1:hover,.form button:focus{
+    color:black;
+    transform: translateY(-4px);
+    background-color: #ffd400;
+ }
  /* hr{
      width: 120px;
      margin: -20px;

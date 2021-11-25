@@ -83,9 +83,8 @@
           <img src="img/Group_people_001A 3.svg" class="gambar-jumbotron">
          </div>
         </div>
-    <section> 
-        <!--bagian header-->
-        <!-- <div class="header">
+    <!-- <section> 
+         <div class="header">
             <div class="row">
                 <div class="col-md"> 
                     <div class="kiri"> 
@@ -109,10 +108,56 @@
                 </div>
             </div>
         </div>
-
-    </section> -->
+    </section>
+     -->
+     <nav>
+       <div class="container">
+        <h3>Column List</h3>
+     
+       <div>
+        <button class="btn-1 btn-outline-success my-2 my-sm-0" type="submit" onclick="window.location.href='FormEditTabelAdmin.php'>
+          <img src="img/add.png" class="add" href="#">Add Column</button>
+       </div>
+       <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Column Name</td>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $conn=mysqli_connect("localhost", "root", "", "kpicso");
     
-    <section> <!--bagian Add-->
+                    if (!$conn)
+                    {
+                        die("Connection Failed".mysqli_connect_errno());
+                    }
+    
+                    $records = mysqli_query($conn,"SHOW COLUMNS FROM data_detail"); // fetch data from database
+    
+                    while($data = mysqli_fetch_array($records))
+                    {
+                ?>
+                <tr>
+                    <td><?php echo $data['Field']; ?></td>
+                    <td>
+                    <!-- Button untuk modal -->
+                    <a href="hapus.php?field=<?php echo $data["Field"]; ?>" type="button" class="" data-toggle="modal">Hapus</a>
+                    </td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </tbody>
+        </table>
+        </div>
+        <?php mysqli_close($conn); // Close connection ?>
+        </div>  
+      </div>   
+     </nav>
+    <!-- <section> 
         <div>
             <button type="button" class="add" onclick="window.location.href='FormEditTabelAdmin.php'">
                 Add
@@ -121,56 +166,6 @@
                 Daftar Kolom :
             </p>
         </div>
-    </section>
-
-    <section> <!--tabel list nama kolom-->
-    <div class="container"> 
-    <div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-        <thead>
-            <tr>
-                <th>Nama Kolom</td>
-                <th>Action</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-
-            <?php
-                $conn=mysqli_connect("localhost", "root", "", "kpicso");
-
-                if (!$conn)
-                {
-                    die("Connection Failed".mysqli_connect_errno());
-                }
-
-                $records = mysqli_query($conn,"SHOW COLUMNS FROM data_detail"); // fetch data from database
-
-                while($data = mysqli_fetch_array($records))
-                {
-
-            ?>
-
-            <tr>
-                <td><?php echo $data['Field']; ?></td>
-                <td>
-                <!-- Button untuk modal -->
-                <a href="hapus.php?field=<?php echo $data["Field"]; ?>" type="button" class="" data-toggle="modal">Hapus</a>
-                </td>
-            </tr>
-            
-            <?php
-                }
-            ?>
-        </tbody>
-
-    </table>
-    </div>
-    
-    <?php mysqli_close($conn); // Close connection ?>
-    </div>     
-</section>
+    </section> -->
 </body>
-
-
 </html>
