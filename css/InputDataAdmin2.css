@@ -112,8 +112,8 @@ h6{
 .btn{
     border:none;
     background-color: #ed1c24;
-    margin: -10px;
-    padding: 16px;
+    padding: 10px;
+    margin-left: 15px;
     font-family: "Titillium Web", sans-serif;
     font-size: 13px;
     font-weight: bold;
@@ -122,15 +122,15 @@ h6{
     border: 0;
     border-radius:5px;
     border: 2px;
-    color:black;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
     transition: all 0.2s;
+    color: #ffff;
 }
 
 .btn:hover,.form button:focus {
-    color: #ffff;
+    color:black;
     transform: translateY(-4px);
     background-color: #ffd400;
 } 
