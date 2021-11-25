@@ -87,6 +87,9 @@
 
     <section> <!--tabel list nama kolom-->
     <div class="container"> 
+    <div class="alert alert-success" role="alert">
+    Data Berhasil Ditambahkan
+    </div>
     <div class="table-responsive">
     <table class="table table-bordered table-striped table-hover">
         <thead>

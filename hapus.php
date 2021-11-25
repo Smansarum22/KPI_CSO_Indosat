@@ -15,13 +15,16 @@
     
     if (mysqli_query($conn, $sql)) {
         echo "Record deleted successfully";
+        header("location:EditTabelAdmin.php?pesan=hapus");
+        
     } else {
         echo "Error deleting record: " . mysqli_error($conn);
+        header("location:EditTabelAdmin.php?pesan=hapus");
     }
     
     mysqli_close($conn);
  
-// header("location:EditTabelAdmin.php?pesan=hapus");
+   
 ?>
 
 
