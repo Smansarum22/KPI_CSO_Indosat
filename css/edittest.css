@@ -70,31 +70,6 @@ body {
    width:100%;
  }
  
-  .nav-link{
-     border:none;
-     background-color: transparent;
-     margin: -10px;
-     padding: 16px;
-     font-family: "Titillium Web", sans-serif;
-     font-size: 13px;
-     font-weight: bold;
-     letter-spacing: .1em;
-     outline: 0;
-     border: 0;
-     border-radius:5px;
-     border: 2px;
-     color:black;
-     -webkit-transition: all 0.3 ease;
-     transition: all 0.3 ease;
-     cursor: pointer;
-     transition: all 0.2s;
-     
- }
- .nav-link:hover,.form button:focus {
-     color: #ffff;
-     transform: translateY(-4px);
-     background-color: #ffd400;
- } 
  .col-md-2{
  background-color: #ffd5003b;
  margin-top: 5%;
@@ -117,7 +92,7 @@ body {
  }
  .btn{
      border:none;
-     background-color: #376e6f;
+     background-color: #ed1c24;
      padding: 10px;
      margin-left: 15px;
      font-family: "Titillium Web", sans-serif;
