@@ -117,7 +117,7 @@ body {
  }
  .btn{
      border:none;
-     background-color: #ed1c24;
+     background-color: #376e6f;
      padding: 10px;
      margin-left: 15px;
      font-family: "Titillium Web", sans-serif;
@@ -147,7 +147,7 @@ body {
  }
  .btn-1{
     border:none;
-    background-color: #ed1c24;
+    background-color: #376e6f;
     padding: 10px;
     margin-left: 15px;
     font-family: "Titillium Web", sans-serif;
@@ -169,6 +169,9 @@ body {
     transform: translateY(-4px);
     background-color: #ffd400;
  }
+ .container{
+    min-height: calc(100vh - 91px - 50px);
+}
  /* hr{
      width: 120px;
      margin: -20px;

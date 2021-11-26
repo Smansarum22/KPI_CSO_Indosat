@@ -58,8 +58,7 @@
      background-color: #ffd400;
      text-align: center;
      font-size: 10px;
-     margin-top: 50px;
-     margin-bottom: 0px;
+     bottom: 0;
      font-family: 'Baloo Tammudu 2', cursive;
      padding: 10px;
  }
@@ -89,7 +88,7 @@
  .btn-1:hover,.form button:focus {
      color: #ffff;
      transform: translateY(-4px);
-     background-color: #ed1c24;
+     background-color: #376e6f;
  } 
  .col-md-2{
  background-color: #ffd5003b;
@@ -125,6 +124,9 @@
     font-family: 'Baloo Tammudu 2', cursive;
     padding: 10px;
    width:100%;
+}
+.container{
+    min-height: calc(100vh - 91px - 50px);
 }
  /* hr{
      width: 120px;
