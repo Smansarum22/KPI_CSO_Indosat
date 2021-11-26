@@ -58,10 +58,14 @@
           </li>
         </ul>
         <div class="search">
+        <form method="post" >
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <!-- <input type="text" name="search">
+            <input type="submit" name="submit"> -->
           </form>
+        </form>
         </div>
       </div>
     </div>
@@ -193,12 +197,28 @@
       </div>
     </div>
   </div>
-
   <div class="footer">
     Copyright &#169; <br> Channel
-</div>
+  </div>
     
 
 </body>
 
 </html>
+
+<?
+$con = new PDO("mysql:host=localhost; dbname=CodeFlix", 'root','');
+if (isset($_POST["submit"])){
+  $str = $_POST["search"];
+  $sth = $con->prepare("SELECT * FROM `seacrh` WHERE Name = `$str`");
+
+  $sth->setFetchMode((PDO:: FETCH_OBJ));
+  $sth-> execute();
+
+  if($row = $sth-> fetch())
+  {
+    ?>
+    <br><br><br>
+  }
+}
+?>
