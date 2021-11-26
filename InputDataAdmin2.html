@@ -1,3 +1,15 @@
+<!-- <?php
+require 'functions.php';
+$mahasiswa = query("SELECT * FROM mahasiswa");
+
+
+//tombol cari ditekan
+if( isset($_POST["cari"])){
+  $mahasiswa = cari($_POST["keyword"])';'
+}
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +68,10 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
+        <!-- <form action="" method="post">
+        <input type="text" name="keyword" placeholder="Search..." autocomplete="off">
+        <button type="submit" name="cari">Search</button>
+        </form> -->
       </div>
     </div>
   </nav>
@@ -134,125 +150,21 @@
       </div>
     </div>
   </div>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand" href="#">
-          <img src="img/Group 106 (1).svg">
-    </a>
-      <div>
-        <form>
-          <button class="btn btn-sm btn-outline-secondary" type="button">Input Data</button>
-          <button class="btn btn-sm btn-outline-secondary" type="button">Edit Data</button>
-          <button class="btn btn-sm btn-outline-secondary" type="button">Logout</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="jumbotron jumbotron-fluid">
-    <img src="img/Group_people_001A 3.svg" class="gambar-jumbotron">
-   </div>
-  </div>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-3"><br><br>
-
-
-
- -->
-
-
-<!--           
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/place.png" class="place">Micro Cluster<hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/shopping-bag.png" class="place">MSA <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/award.png" class="place">QURO <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/sim.png" class="place">CSSO <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/store.png" class="place">OPA <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/award.png" class="place">RGUGA <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/sim.png" class="place">Sell in Sp <hr>
-          </button> <br>
-          <button class="btn-1 btn-sm btn-outline-secondary" type="button">
-            <img src="img/store.png" class="place">Inject New SP<hr>
-          </button> <br>
-        </div>
-        <div class="col-6 col-md-9">
-            <h3>Data Outlet</h3>
-            <h6>Download file<img src="img/downloading-file.png" class="download"></h6>
-            <img src="img/table1.svg" class="table">
-        </div>
-      </div>
-    </div>
-  </div> -->
   <div class="footer">
     Copyright &#169; <br> Channel
 </div>
-    <!-- <nav class="navbar bg-transparent">
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="img/Group 106.svg" width="30" height="30"  alt="">
-          Bootstrap
-        </a>
-      </nav>
-        <img src="img/Group_people_001A 3.svg" class="navbar-brand">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Input Nama<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Edit Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">LogOut</a>
-            </li>
-          </ul>
-        </div>
-      </nav> -->
-    <!-- <div class="row">
-        <div class="col-md">
-            <div class="bagian-kiri">
-               <img src="img/Group 104.svg" class="gambarindosat"> 
-               <div class="login-page">
-                   <form method="post">
-                     <input type="submit" name="InputData" value="InputData" class="btn"> 
-                     <input type="submit" name="EditTable" value="EditTable" class="btn"> 
-                   </form>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div>
-            <h3>Monitoring KPI CSO</h3> 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> <br><br>
-            <img src="img/Group_people_001A 1.svg" class="gambar-navbar">
-            <h3>Hello, Admin!</h3>
-            <div class="Data-outlet">
-                <h3>Data Outlet</h3> 
-                <img src="img/Table.svg" class="image">
-                <div class="download-file">
-                    <h5>Download file<img src="img/downloading-file.png" class="download"></h5>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
 </body>
 
 <script src="javascriptnya.js"></script>
+
+
+<!-- function cari($keyword){
+  $query = "SELECT * FROM mahasiswa
+              WHERE
+            nama LIKE '%$keyword%' OR
+            nama LIKE '%$keyword%' OR
+            nama LIKE '%$keyword%' OR
+            ";
+  return query($query)
+
+} -->
