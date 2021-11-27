@@ -41,7 +41,7 @@
               Input Data
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="InputDataAdmin2.html">Summary</a></li>
+              <li><a class="dropdown-item" href="InputDataAdmin.php">Summary</a></li>
               <li><a class="dropdown-item" href="detail.html">Detail</a></li>
             </ul>
           </li>
