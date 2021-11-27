@@ -1,10 +1,8 @@
-<?php
-
+<!-- <?php
   session_start();
   require 'server.php';
   $db = new server;
-
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -206,7 +204,7 @@
 
 </html>
 
-<?
+<!-- <?
 $con = new PDO("mysql:host=localhost; dbname=CodeFlix", 'root','');
 if (isset($_POST["submit"])){
   $str = $_POST["search"];
@@ -219,6 +217,21 @@ if (isset($_POST["submit"])){
   {
     ?>
     <br><br><br>
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td><?php echo $row->Name; ?></td>
+    <td><?php echo $row->Description;?></td>
+    </tr>
+    </table>
+<?php
+  }
+
+  else{
+    echo "Name Does not exist";
   }
 }
-?>
+?> -->
