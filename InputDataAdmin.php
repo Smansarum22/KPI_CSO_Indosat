@@ -1,8 +1,8 @@
-<!-- <?php
+<?php
   session_start();
   require 'server.php';
   $db = new server;
-?> -->
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,16 +55,16 @@
             <a class="nav-link" href="#">Logout</a>
           </li>
         </ul>
-        <div class="search">
-        <form method="post" >
+        <!-- <form method="post" class="search">
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <!-- <input type="text" name="search">
-            <input type="submit" name="submit"> -->
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Search</button>
           </form>
+        </form> -->
+        <form  class="search" action="InputDataAdmin.php" method="post">
+          <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name here.." autocomplete="off">
+          <input type="submit" name="cari" class="btn btn-outline-success my-2 my-sm-0"></input>
         </form>
-        </div>
       </div>
     </div>
   </nav>
@@ -135,7 +135,7 @@
         </ul>
       </div>
       <div class="col-md-10">
-        <h3>SUMMARY</h3> 
+        <!-- <h3>SUMMARY</h3>  --> <br><br>
         <a href=""><img src="img/upload.png" class="download"></a>
         <a href=""><img src="img/downloading-file.png" class="download">
         
@@ -144,13 +144,28 @@
           <div class="container">
               <div class="table-responsive">
                   <table class="table table-bordered table-striped table-hover">
-                      <thead>
+                      <thead class="table">
                           <tr>
-                            <th>Nama Kolom</td>
-                            <th>Action</th>
+                            <th>Site ID</th>
+                            <th>SIDE NAME</th>
+                            <th>CLUSTER</th>
+                            <th>REGION</th>
+                            <th>JAVA/OUTSITE JAVA</th>
+                            <th>CATEGORI</th>
+                            <th>GROUP_CATEGORY</th>
+                            <th>MAPPING_TO_CSO</th>
+                            <th>QSSO</th>
+                            <th>QURO_MOBO_M-1</th>
+                            <th>QURO_MOBO_M-0</th>
+                            <th>QURO_VC</th>
+                            <th>TOTAL_QURO</th>
+                            <th>3QSSO</th>
+                            <th>5QURO</th>
+                            <th>RGU-GA INJ</th>
+                            <th>RGU-GA HVC</th>
+                            <th>COMPLIANCE</th>
                           </tr>
                       </thead>
-
                       <tbody>
                         <?php
                             $conn=mysqli_connect("localhost", "root", "", "xyz");
@@ -160,7 +175,14 @@
                                 die("Connection Failed".mysqli_connect_errno());
                             }
 
-                            $records = mysqli_query($conn,"SELECT * FROM tabelexcel2"); // fetch data from database
+                            if( isset($_POST["cari"]) ){
+                              $records = $db->cari($_POST["keyword"]);
+                             
+                            } else {
+                              $records = mysqli_query($conn,"SELECT * FROM tabelexcel2"); // fetch data from database
+                            }
+
+                            
                             $tabelnya = mysqli_query($conn,"SHOW COLUMNS FROM tabelexcel2");
                             $jumlah_kolom = mysqli_num_rows($tabelnya);
                             while($data = mysqli_fetch_array($records))
@@ -198,9 +220,6 @@
   <div class="footer">
     Copyright &#169; <br> Channel
   </div>
-    
 
 </body>
-
 </html>
-

@@ -37,6 +37,16 @@ class server {
     function add() {
 
     }
+    
+    function cari($keyword){
+        $query = "SELECT * FROM tabelexcel2
+                    WHERE
+                
+                kolom2 LIKE '%$keyword%'
+                    ";
+        // return query($query);
+        return mysqli_query($this->connect, $query);
+    }
 
 }
 
