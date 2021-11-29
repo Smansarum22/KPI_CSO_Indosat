@@ -47,7 +47,5 @@ class server {
         // return query($query);
         return mysqli_query($this->connect, $query);
     }
-
 }
-
 ?>
