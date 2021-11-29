@@ -1,4 +1,6 @@
-<?php
+<?php 
+
+
 
 class server {
 
@@ -8,7 +10,7 @@ class server {
         $server = "localhost";
         $username = "root";
         $password = "";
-        $database = "kpicso";
+        $database = "xyz";
         $this->connect = new mysqli($server,$username,$password,$database);
     }
 
@@ -37,6 +39,7 @@ class server {
     function add() {
 
     }
+
     
     function cari($keyword){
         $query = "SELECT * FROM tabelexcel2

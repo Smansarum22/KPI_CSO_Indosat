@@ -49,7 +49,7 @@
             <a class="nav-link active" aria-current="page" href="#">Input Data</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#">Edit Data</a>
+            <a class="nav-link" href='EditTabelAdmin.php'>Edit Data</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Logout</a>
@@ -62,15 +62,14 @@
           </form>
         </form> -->
         <form  class="search" action="InputDataAdmin.php" method="post">
-          <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name here.." autocomplete="off">
-          <input type="submit" name="cari" class="btn btn-outline-success my-2 my-sm-0"></input>
+          <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name.." autocomplete="off">
+          <input type="submit" name="cari"  value= "search" class="btn btn-outline-success my-2 my-sm-0"></input>
         </form>
       </div>
     </div>
   </nav>
   <div class="jumbotron jumbotron-fluid">
     <img src="img/Group_people_001A 3.svg" class="gambar-jumbotron">
-   </div>
   </div>
   <div class="container">
     <div class="row">
@@ -135,7 +134,7 @@
         </ul>
       </div>
       <div class="col-md-10">
-        <!-- <h3>SUMMARY</h3>  --> <br><br>
+       <h3>From BI with Filter Retail Fisik</h3> <br><br>
         <a href=""><img src="img/upload.png" class="download"></a>
         <a href=""><img src="img/downloading-file.png" class="download">
         
