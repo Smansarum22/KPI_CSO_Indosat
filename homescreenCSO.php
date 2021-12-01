@@ -133,42 +133,10 @@
         <a href=""><img src="img/downloading-file.png" class="download">
         
           <!-- <img src="img/table1.svg" class="table"> -->
-          <section> <!--tampilkan tabel-->
+          <section> 
           <div class="container">
-              <!-- <div class="table-responsive">
-                  <table class="table table-bordered table-striped table-hover">
-                      <thead class="table">
-                          <tr>
-                            <th>Site ID</th>
-                            <th>SIDE NAME</th>
-                            <th>CLUSTER</th>
-                            <th>REGION</th>
-                            <th>JAVA/OUTSITE JAVA</th>
-                            <th>CATEGORI</th>
-                            <th>GROUP_CATEGORY</th>
-                            <th>MAPPING_TO_CSO</th>
-                            <th>QSSO</th>
-                            <th>QURO_MOBO_M-1</th>
-                            <th>QURO_MOBO_M-0</th>
-                            <th>QURO_VC</th>
-                            <th>TOTAL_QURO</th>
-                            <th>3QSSO</th>
-                            <th>5QURO</th>
-                            <th>RGU-GA INJ</th>
-                            <th>RGU-GA HVC</th>
-                            <th>COMPLIANCE</th>
-                          </tr>
-                      </thead>
-                      <tbody> -->
                       <div class="table">
-                  <!-- <table class= "table">
-                      <thead class="table">
-                          <tr>
                             <?php 
-                            // $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
-                            // while($data = mysqli_fetch_array($sql_kolom)){
-                            //   echo '<th scope="col">'.ucwords(str_replace('_','', $data['Field'])).'</th>';;
-                            // }
                             $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
                             while($data = $sql_kolom-> fetch_assoc()){
                               echo $culumns[] = $data['Field'];
