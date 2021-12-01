@@ -44,10 +44,10 @@
               <li><a class="dropdown-item" href="InputDataAdmin.php">Summary</a></li>
               <li><a class="dropdown-item" href="detail.html">Detail</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href='EditTabelAdmin.php'>Edit Data</a>
           </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href='InputDataAdmin.php'>Summary</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Logout</a>
           </li>
@@ -135,7 +135,7 @@
           <!-- <img src="img/table1.svg" class="table"> -->
           <section> <!--tampilkan tabel-->
           <div class="container">
-              <div class="table-responsive">
+              <!-- <div class="table-responsive">
                   <table class="table table-bordered table-striped table-hover">
                       <thead class="table">
                           <tr>
@@ -159,7 +159,23 @@
                             <th>COMPLIANCE</th>
                           </tr>
                       </thead>
-                      <tbody>
+                      <tbody> -->
+                      <div class="table">
+                  <!-- <table class= "table">
+                      <thead class="table">
+                          <tr>
+                            <?php 
+                            // $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            // while($data = mysqli_fetch_array($sql_kolom)){
+                            //   echo '<th scope="col">'.ucwords(str_replace('_','', $data['Field'])).'</th>';;
+                            // }
+                            $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            while($data = $sql_kolom-> fetch_assoc()){
+                              echo $culumns[] = $data['Field'];
+                            } 
+                            
+                            ?>  
+                      
                         <?php
                             $conn=mysqli_connect("localhost", "root", "", "xyz");
 

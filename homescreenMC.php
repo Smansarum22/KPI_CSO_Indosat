@@ -135,7 +135,7 @@
       </div>
       <div class="col-md-10">
        <h3>From BI with Filter Retail Fisik</h3> <br><br>
-        <a href=""><img src="img/upload.png" class="download"></a>
+        <!-- <a href=""><img src="img/upload.png" class="download"></a> -->
         <a href=""><img src="img/downloading-file.png" class="download"> </a>
         
           <!-- <img src="img/table1.svg" class="table"> -->
