@@ -42,17 +42,17 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="InputDataAdmin.php">Summary</a></li>
-              <li><a class="dropdown-item" href="detail.html">Detail</a></li>
+              <li><a class="dropdown-item" href="detail.php">Detail</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Input Data</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href='EditTabelAdmin.php'>Edit Data</a>
+            <a class="nav-link" href='EditTabelAdmin.php'>Edit Tabel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="logout.php">Logout</a>
           </li>
         </ul>
         <!-- <form method="post" class="search">
