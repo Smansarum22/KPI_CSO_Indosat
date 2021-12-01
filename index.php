@@ -6,6 +6,74 @@
 
 ?>
 
+<?php
+    //Login sebagai admin
+    if(isset($_POST['admin'])){
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $hasil = $db->admin($username,$password);
+
+        echo $hasil;
+
+        if($hasil != false){
+        header("Location: InputDataAdmin.php");
+        }else{
+        ?>
+        <div class="alert">
+        <center>  
+        <div class="alert alert-danger" role="alert">
+          Username dan password tidak terdaftar!
+        </div>
+        </center>
+        </div>
+        <?php
+        }
+
+    //Login sebagai mc
+    } else if (isset($_POST['mc'])) {
+        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $hasil = $db->mc($username,$password);
+
+        echo $hasil;
+
+        if($hasil != false){
+        header("Location: homescreenMC.php");
+        }else{
+        ?>
+          <div class="alert">
+          <center>  
+          <div class="alert alert-danger" role="alert">
+            Username dan password tidak terdaftar!
+          </div>
+          </center>
+          </div>
+        <?php
+        }
+
+    //Login sebagai cso
+    } else if (isset($_POST['cso'])) {
+        
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $hasil = $db->cso($username,$password);
+
+        echo $hasil;
+
+        if($hasil != false){
+        header("Location: homescreenCSO.php");
+        }else{
+        $tampil = $db->tampilAlert("Username dan password tidak terdaftar!", "danger");  
+      }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,9 +125,9 @@
                         <input type="text" name="username" placeholder="USERNAME" class="input">
                         <br>
                         <input type="password" name="password" id="password" placeholder="PASSWORD" class="input">
-                        <input type="submit" name="admin" value="admin" class="btn-admin">
-                        <input type="submit" name="mc" value="mc" class="btn-cso">
-                        <input type="submit" name="cso" value="cso" class="btn-cso">
+                        <input type="submit" name="admin" value="ADMIN" class="btn-admin">
+                        <input type="submit" name="mc" value="MC" class="btn-cso">
+                        <input type="submit" name="cso" value="CSO" class="btn-cso">
                         
             </form>
           </div>
@@ -72,62 +140,5 @@
 </body>
 
 <script src="javascriptnya.js"></script>
-
-<?php
-    //Login sebagai admin
-    if(isset($_POST['admin'])){
-
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $hasil = $db->admin($username,$password);
-
-        echo $hasil;
-
-        if($hasil != false){
-        header("Location: InputDataAdmin.php");
-        }else{
-        ?>
-        // echo 'Username dan password tidak terdaftar';
-        <div class="alert alert-danger" role="alert">
-            This is a danger alert—check it out!
-        </div>
-        <?php
-        }
-
-    //Login sebagai mc
-    } else if (isset($_POST['mc'])) {
-        
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $hasil = $db->mc($username,$password);
-
-        echo $hasil;
-
-        if($hasil != false){
-        header("Location: homescreenMC.php");
-        }else{
-        echo 'Username dan password tidak terdaftar';
-        }
-
-    //Login sebagai cso
-    } else if (isset($_POST['cso'])) {
-        
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $hasil = $db->cso($username,$password);
-
-        echo $hasil;
-
-        if($hasil != false){
-        header("Location: homescreenCSO.php");
-        }else{
-        echo 'Username dan password tidak terdaftar';
-        }
-    }
-
-?>
 
 </html>

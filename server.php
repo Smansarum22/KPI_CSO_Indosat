@@ -148,5 +148,12 @@ class server {
             
         }
     }
+
+    //fungsi menampilkan alert jika login gagal
+    function tampilAlert($text, $tipe) {
+        echo "<div class=\"alert alert-".$tipe."\" role=\"alert\">
+                <p>".$text."</p>
+              </div>";
+    }
 }
 ?>
