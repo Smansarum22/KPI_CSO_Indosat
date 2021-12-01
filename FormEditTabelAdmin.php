@@ -24,7 +24,7 @@
 </head>
 <body style="background-image: url('img/Group\ 154\ \(1\).svg');">    
 <nav class="navbar navbar-expand-lg fixed-top">
-     <div class="container-fluid">
+     <div class="container-fluid fixed-top">
             <a class="navbar-brand" href="#">
               <img src="img/Group 106 (1).svg" class="logo">
             </a>

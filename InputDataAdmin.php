@@ -2,6 +2,7 @@
   session_start();
   require 'server.php';
   $db = new server;
+  $conn=mysqli_connect("localhost", "root", "", "xyz");
 ?> 
 
 <!DOCTYPE html>
@@ -42,17 +43,17 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="InputDataAdmin.php">Summary</a></li>
-              <li><a class="dropdown-item" href="detail.php">Detail</a></li>
+              <li><a class="dropdown-item" href="detail.html">Detail</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Input Data</a>
           </li> -->
           <li class="nav-item">
-            <a class="nav-link" href='EditTabelAdmin.php'>Edit Tabel</a>
+            <a class="nav-link" href='EditTabelAdmin.php'>Edit Data</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logout.php">Logout</a>
+            <a class="nav-link" href="#">Logout</a>
           </li>
         </ul>
         <!-- <form method="post" class="search">
@@ -134,42 +135,13 @@
         </ul>
       </div>
       <div class="col-md-10">
-       <h3>From BI with Filter Retail Fisik</h3> <br><br>
+       <h3>From BI with Filter Retail Fisik</h3> 
         <a href=""><img src="img/upload.png" class="download"></a>
         <a href=""><img src="img/downloading-file.png" class="download"> </a>
-        
-          <!-- <img src="img/table1.svg" class="table"> -->
-          <!-- <section> 
-          <div class="container">
-              <div class="table-responsive">
-                  <table class="table table-bordered table-striped table-hover">
-                      <thead class="table">
-                          <tr>
-                            <th>Site ID</th>
-                            <th>SIDE NAME</th>
-                            <th>CLUSTER</th>
-                            <th>REGION</th>
-                            <th>JAVA/OUTSITE JAVA</th>
-                            <th>CATEGORI</th>
-                            <th>GROUP_CATEGORY</th>
-                            <th>MAPPING_TO_CSO</th>
-                            <th>QSSO</th>
-                            <th>QURO_MOBO_M-1</th>
-                            <th>QURO_MOBO_M-0</th>
-                            <th>QURO_VC</th>
-                            <th>TOTAL_QURO</th>
-                            <th>3QSSO</th>
-                            <th>5QURO</th>
-                            <th>RGU-GA INJ</th>
-                            <th>RGU-GA HVC</th>
-                            <th>COMPLIANCE</th>
-                          </tr>
-                      </thead>
-                      <tbody> -->
-                      <br><br>
-                        <table class="table">
-                          <thead>
-                            <tr>
+        <br><br>
+        <table class="table">
+          <thead>
+            <tr>
                             <?php 
                             $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
                             while($data = mysqli_fetch_array($sql_kolom)){
@@ -182,9 +154,71 @@
                               // foreach($data as $key => $value){
                                 // echo "$key=$value"; 
                             ?> 
-                              </tr>
-                            </thead>
-                            <tbody>
+            </tr>
+          </thead>
+         
+          <tbody>
+                        <?php
+                            $conn=mysqli_connect("localhost", "root", "", "xyz");
+
+                            if (!$conn)
+                            {
+                                die("Connection Failed".mysqli_connect_errno());
+                            }
+
+                            if( isset($_POST["cari"]) ){
+                              $records = $db->cari($_POST["keyword"]);
+                             
+                            } else {
+                              $records = mysqli_query($conn,"SELECT * FROM tabelexcel2"); // fetch data from database
+                            }
+
+                            
+                            $tabelnya = mysqli_query($conn,"SHOW COLUMNS FROM tabelexcel2");
+                            $jumlah_kolom = mysqli_num_rows($tabelnya);
+                            while($data = mysqli_fetch_array($records))
+                            {
+
+                        ?>
+
+                        <tr>
+                            <?php
+                            for ($x = 0; $x <= $jumlah_kolom - 1; $x++) 
+                            { 
+                            ?>
+                                <td><?php echo $data[$x]; ?></td>
+                            <?php   
+                            } 
+                            ?>
+                        </tr>
+            
+                        <?php
+                            }
+                        ?>
+                      </tbody>
+        </table>
+        </div>
+          <!-- <img src="img/table1.svg" class="table"> -->
+          <section> <!--tampilkan tabel-->
+          <div class="container">
+              <div class="table">
+                  <!-- <table class= "table">
+                      <thead class="table">
+                          <tr>
+                            <?php 
+                            // $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            // while($data = mysqli_fetch_array($sql_kolom)){
+                            //   echo '<th scope="col">'.ucwords(str_replace('_','', $data['Field'])).'</th>';;
+                            // }
+                            $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            while($data = $sql_kolom-> fetch_assoc()){
+                              echo $culumns[] = $data['Field'];
+                            } 
+                            
+                            ?>  
+                          </tr>
+                      </thead>
+                      <tbody>
                         <?php
                             $conn=mysqli_connect("localhost", "root", "", "xyz");
 
@@ -224,13 +258,14 @@
                         ?>
                       </tbody>
 
-                  </table>
+                  </table> -->
 
               </div> 
               <?php mysqli_close($conn); // Close connection ?>
           </div>
 
           </section>
+        
       </div>
     </div>
   </div>
