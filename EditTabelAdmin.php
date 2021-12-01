@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Table</title>
+    <title>Edit Tabel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico" type="image/icon type">
     <link rel="stylesheet" type="text/css"  href="css/FormEditTabelAdmin.css">
@@ -36,14 +36,14 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href='InputDataAdmin.php'>Summary</a></li>
-                    <li><a class="dropdown-item" href="summary.html">Detail</a></li>
+                    <li><a class="dropdown-item" href="detail.php">Detail</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href='EditTabelAdmin.php'>Edit Data</a>
+                  <a class="nav-link active" href='EditTabelAdmin.php'>Edit Tabel</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="logout.php">Logout</a>
                 </li>
               </ul>
               <!-- <div class="search">
@@ -52,10 +52,11 @@
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
               </div> -->
-              <form  class="search" action="InputDataAdmin.php" method="post">
+              <!--ini bagian search-->
+              <!-- <form  class="search" action="InputDataAdmin.php" method="post">
                 <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name.." autocomplete="off"></input>
                 <input type="submit" name="cari" value= "search" class="btn btn-outline-success my-2 my-sm-0"></input>
-              </form> 
+              </form>  -->
             </div>
         </div> 
     </nav>
@@ -66,11 +67,11 @@
     <nav class="container">
             <!-- <button type="button" class="btn" onclick="window.location.href='EditTabelAdmin.php'">EDITT</button> -->
             <button type="button" class="btn-1" onclick="window.location.href='FormEditTabelAdmin.php'">
-                Add Column
+                Tambah Kolom
             </button>
     </nav>
     <nav class="container">
-        <h3>Column List</h3>
+        <h3>List Kolom</h3>
         <div class="alert alert-success" role="alert">
             Data Berhasil Ditambahkan
         </div>

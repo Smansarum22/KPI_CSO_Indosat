@@ -39,20 +39,20 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href='InputDataAdmin.php'>Summary</a></li>
-                    <li><a class="dropdown-item" href="summary.html">Detail</a></li>
+                    <li><a class="dropdown-item" href="detail.php">Detail</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href='EditTabelAdmin.php'>Edit Data</a>
+                  <a class="nav-link active" href='EditTabelAdmin.php'>Edit Tabel</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="logout.php">Logout</a>
                 </li>
               </ul>
-              <form  class="search" action="InputDataAdmin.php" method="post">
+              <!-- <form  class="search" action="InputDataAdmin.php" method="post">
                   <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name.." autocomplete="off">
                   <input type="submit" name="cari"  value= "search" class="btn btn-outline-success my-2 my-sm-0"></input>
-              </form>
+              </form> -->
             </div>
           </div>
 </nav>
@@ -62,15 +62,15 @@
 <nav>
     <div class="container">
         <div class="container mt-5 mb-5 p-3 card text-center ">
-                <h5>Add Column Name</h5>   
+                <h5>Tambah Kolom</h5>   
                 <form class="myForm" method="post">
                     <center>
                     <div class="form-group row">
                         <div class="col-sm-20 mb-3">
-                            <input type="text" name="clname" placeholder="Column Name" class="form-control" autocomplete="off">
+                            <input type="text" name="clname" placeholder="Nama Kolom" class="form-control" autocomplete="off">
                         </div>
                     </div>
-                    <input type="submit" name="add" value="Add Column" class="btn-1">
+                    <input type="submit" name="add" value="Tambah" class="btn-1">
                     </center>    
                 </form> 
         </div>
