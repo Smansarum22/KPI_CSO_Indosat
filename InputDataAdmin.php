@@ -27,7 +27,7 @@
 <body style="background-image: url('img/Group\ 154\ \(1\).svg');">
   
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid fixed-top">
       <a class="navbar-brand" href="#">
         <img src="img/Group 106 (1).svg" class="logo">
       </a>
@@ -136,10 +136,10 @@
       <div class="col-md-10">
        <h3>From BI with Filter Retail Fisik</h3> <br><br>
         <a href=""><img src="img/upload.png" class="download"></a>
-        <a href=""><img src="img/downloading-file.png" class="download">
+        <a href=""><img src="img/downloading-file.png" class="download"> </a>
         
           <!-- <img src="img/table1.svg" class="table"> -->
-          <section> <!--tampilkan tabel-->
+          <!-- <section> 
           <div class="container">
               <div class="table-responsive">
                   <table class="table table-bordered table-striped table-hover">
@@ -165,7 +165,26 @@
                             <th>COMPLIANCE</th>
                           </tr>
                       </thead>
-                      <tbody>
+                      <tbody> -->
+                      <br><br>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                            <?php 
+                            $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            while($data = mysqli_fetch_array($sql_kolom)){
+                              echo '<th scope="col" >'.ucwords(str_replace('_','', $data['Field'])).'</th>';;
+                            }
+                            // $sql_kolom = mysqli_query($conn, "SHOW COLUMNS FROM tabelexcel2");
+                            // while($data = $sql_kolom-> fetch_assoc()){
+                            //   echo $culumns[] = $data['Field'];
+                            // } 
+                              // foreach($data as $key => $value){
+                                // echo "$key=$value"; 
+                            ?> 
+                              </tr>
+                            </thead>
+                            <tbody>
                         <?php
                             $conn=mysqli_connect("localhost", "root", "", "xyz");
 
@@ -212,7 +231,6 @@
           </div>
 
           </section>
-        </a>
       </div>
     </div>
   </div>
