@@ -110,7 +110,7 @@
               <li><a class="dropdown-item" href="#">Voucer</a></li>
               <li><a class="dropdown-item" href="#">SP old</a></li>
               <li><a class="dropdown-item" href="#">New SP</a></li>
-              <li><a class="dropdown-item" href="#">Pulsa</a></li>
+              <li><a class="dropdown-item" href="#">Reload</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
