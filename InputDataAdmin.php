@@ -21,12 +21,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/icon type">
     <link rel="stylesheet" type="text/css"  href="css/InputDataAdmin2.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap4.min.css">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
 
 </head>
 <body style="background-image: url('img/Group\ 154\ \(1\).svg');">
-  
+
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid fixed-top">
       <a class="navbar-brand" href="#">
@@ -62,21 +77,21 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Search</button>
           </form>
         </form> -->
-        <form  class="search" action="InputDataAdmin.php" method="post">
+        <!-- <form  class="search" action="InputDataAdmin.php" method="post">
           <input class="search-1" type="text" name="keyword" autofocus placeholder="Search Side Name.." autocomplete="off">
           <input type="submit" name="cari"  value= "search" class="btn btn-outline-success my-2 my-sm-0"></input>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
-  <div class="jumbotron jumbotron-fluid">
-    <img src="img/Group_people_001A 3.svg" class="gambar-jumbotron">
+  <div class="jumbotron-fluid"> <br><br>
+    <img src="img/Group_people_001A 3.svg" class="gambar-jumbotron"> 
   </div>
   <div class="container">
     <div class="row">
       <div class="col-md-2">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" style="margin-top: 20px;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sell in SP
             </a>
@@ -110,7 +125,7 @@
               <li><a class="dropdown-item" href="#">Voucer</a></li>
               <li><a class="dropdown-item" href="#">SP old</a></li>
               <li><a class="dropdown-item" href="#">New SP</a></li>
-              <li><a class="dropdown-item" href="#">Reload</a></li>
+              <li><a class="dropdown-item" href="#">Pulsa</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -134,12 +149,12 @@
          
         </ul>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-10"> <br><br>
        <h3>From BI with Filter Retail Fisik</h3> 
-        <a href=""><img src="img/upload.png" class="download"></a>
+        <!-- <a href=""><img src="img/upload.png" class="download"></a> -->
         <a href=""><img src="img/downloading-file.png" class="download"> </a>
         <br><br>
-        <table class="table">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
           <thead>
             <tr>
                             <?php 
@@ -273,5 +288,23 @@
     Copyright &#169; <br> Channel
   </div>
 
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable({
+      "scrollX": true
+    });
+} );
+
+    // $(document).ready(function() {
+    //     var table = $('#example').DataTable( {
+    //         "scrollX": true,
+    //         lengthChange: false,
+    //         buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+    //     } );
+    
+    //     table.buttons().container()
+    //         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+    // } );
+</script>
 </body>
 </html>
