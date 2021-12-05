@@ -16,28 +16,31 @@
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/icon type">
     <link rel="stylesheet" type="text/css"  href="css/InputDataAdmin2.css">
     <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap4.min.css">
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.bootstrap4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/icon type">
+    <link rel="stylesheet" type="text/css"  href="css/InputDataAdmin2.css">
+    <!-- <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap4.min.css"> -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/DataTables-1.11.3/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"  href="assets/Buttons-2.1.0/css/buttons.bootstrap4.min.css">
+   
 
 </head>
 <body style="background-image: url('img/Group\ 154\ \(1\).svg');">
@@ -152,7 +155,7 @@
       <div class="col-md-10"> <br><br>
        <h3>From BI with Filter Retail Fisik</h3> 
         <!-- <a href=""><img src="img/upload.png" class="download"></a> -->
-        <a href=""><img src="img/downloading-file.png" class="download"> </a>
+        <!-- <a href=""><img src="img/downloading-file.png" class="download"> </a> -->
         <br><br>
         <table id="example" class="table table-striped table-bordered" style="width:100%">
           <thead>
@@ -287,24 +290,34 @@
   <div class="footer">
     Copyright &#169; <br> Channel
   </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- data table -->
+    <script src="assets/DataTables-1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="assets/DataTables-1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/Buttons-2.1.0/js/dataTables.buttons.min.js"></script>
+    <script src="assets/Buttons-2.1.0/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="assets/pdfmake-0.1.36/pdfmake.min.js"></script>
+    <script src="assets/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="assets/Buttons-2.1.0/js/buttons.html5.min.js"></script>
+    <script src="assets/Buttons-2.1.0/js/buttons.print.min.js"></script>
 <script>
   $(document).ready(function() {
-    $('#example').DataTable({
-      "scrollX": true
+    var table = $('#example').DataTable( {
+      "scrollX": true,
+      // lengthChange: false,
+      buttons: [ 'excel', 'csv']
     });
-} );
-
-    // $(document).ready(function() {
-    //     var table = $('#example').DataTable( {
-    //         "scrollX": true,
-    //         lengthChange: false,
-    //         buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
-    //     } );
     
-    //     table.buttons().container()
-    //         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-    // } );
+    table.buttons().container()
+              .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+    } );
 </script>
 </body>
 </html>
