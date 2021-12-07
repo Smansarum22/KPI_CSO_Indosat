@@ -297,17 +297,6 @@
       "scrollX": true
     });
 } );
-
-    // $(document).ready(function() {
-    //     var table = $('#example').DataTable( {
-    //         "scrollX": true,
-    //         lengthChange: false,
-    //         buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
-    //     } );
-    
-    //     table.buttons().container()
-    //         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-    // } );
 </script>
 </body>
 </html>

@@ -41,10 +41,8 @@
     <link rel="stylesheet" type="text/css"  href="assets/DataTables-1.11.3/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css"  href="assets/Buttons-2.1.0/css/buttons.bootstrap4.min.css">
    
-
 </head>
 <body style="background-image: url('img/Group\ 154\ \(1\).svg');">
-
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid fixed-top">
       <a class="navbar-brand" href="#">
